@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Computer Engineer</p>
+                <h1>Hi, I'm<span> Chuembou</span><br>K. Liz Perla from Cameroon</h1>
+            </div>
+        </div>
+    </div>
+
+    <!----------about---------- -->
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">About Me</h1>
+                    <p>Hi, I’m Chuembou Liz Perla, a Computer Engineering student currently in Year 2 of my B.Tech in Computer Science and Engineering at Institut Universitaire de la Côte (IUC). 
+                        I'm still discovering my interests in tech, but I enjoy learning how things work and building my skills in programming, web development, and networking.
+
+                         I may not have a clear specialty yet, but I’m taking my time to grow, explore different areas in computer science,
+                         and improve through academic projects and personal learning.
+</p>
+
+                           <div class="tab-tittles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                           </div>
+                           <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Technical Skills(Beginner level)</span><br>
+                                    Programming Languages: C, C++, Python<br>
+                                    Basic Web Development: HTML, CSS, Bootsrap<br>
+                                    Algorithm and Data Structure<br>
+                                    Computer Networking Fundamentals<br>
+                                    Problem-Solving and Debugging </li>   
+                            </ul>
+                           </div>
+                           <div class="tab-contents" id="experience">I am currently focused on building my technical skills and
+                             academic projects while actively developing my expertise through studies and personal initiatives. 
+                             Though I don’t have formal professional experience yet, I am preparing myself to be industry-ready and
+                              eager to take on my first professional challenges.
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                            <li><span>2022</span><br>GCE Ordinary Level at GBHS Bojongo</li>
+                            <li><span>2024</span><br>GCE Advanced Level at GBHS Bojongo</li>
+                            <li><span>2025-Current</span><br>Year 1-Bachelor of Technology (B.Tech) in Computer Science and Engineering,
+                                 at Institut Universitaire de la Côte (IUC)</li>
+                                </ul>
+                        </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+  <!------------------------contact---------------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-tittle">Contact Me</h1>
+                <p>lizperlach@gmail.com</p>
+                <p>679871232 / 692934023</p>
+                <div class="social-icons">
+               <a href="https://www.facebook.com/profile.php?id=100086791553853" target="_blank">
+               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" width="24" style="filter: invert(27%) sepia(97%) saturate(749%) hue-rotate(202deg) brightness(92%) contrast(90%);">
+                 </a>
+               <a href="mailto:lizperlach@gmail.com">
+               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" width="24" style="filter: invert(36%) sepia(13%) saturate(4806%) hue-rotate(325deg) brightness(100%) contrast(94%);">
+                 </a>
+               <a href="https://wa.me/237679871232" target="_blank">
+               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" width="24" style="filter: invert(44%) sepia(52%) saturate(747%) hue-rotate(93deg) brightness(94%) contrast(91%);">
+                 </a>
+                         </div>
+
+            </div>
+               <div class="contact-right"></div>
+        </div>
+    </div>
+  </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+
+</html>
